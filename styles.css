@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+:root {
+    --radius: 10px;
+}
+
+.user-section{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.user-card {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    background: transparent;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.user-card::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( rgba(0,0,0,.2) 70%, rgba(0,0,0,.8));
+}
+
+.user-card img{
+    height: 100%;
+    width: 100%;
+    border-radius: var(--radius);
+    object-fit: cover;
+    object-position: center top;
+}
+
+.user-card h3{
+    position: absolute;
+    bottom: 10px ;
+    /* width: 100%;
+    text-align: center; */
+    left: 50%;
+    transform: translateX(-50%);
+    color: whitesmoke;
+    z-index: 10;
+}
+
